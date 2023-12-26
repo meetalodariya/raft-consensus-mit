@@ -23,7 +23,7 @@ func (rf *Raft) GetAtomicInt32(ptr *int32) int32 {
 }
 
 func (rf *Raft) StoreAtomicInt32(ptr *int32, val int32) {
-	atomic.StoreInt32(ptr, 1)
+	atomic.StoreInt32(ptr, val)
 }
 
 func (rf *Raft) GetAtomicInt64(ptr *int64) int64 {
@@ -32,7 +32,7 @@ func (rf *Raft) GetAtomicInt64(ptr *int64) int64 {
 }
 
 func (rf *Raft) StoreAtomicInt64(ptr *int64, val int64) {
-	atomic.StoreInt64(ptr, 1)
+	atomic.StoreInt64(ptr, val)
 }
 
 // Leader election timeout
